@@ -5,4 +5,4 @@
 - [컴퓨터에 환경 구축 VScode&Python 설치](https://blog.naver.com/whale_coding/222689650435)
 
 ### 숙제
-- [가위바위보](python/가위바위보.md)
+- [가위바위보](python/숙제_가위바위보.md)
