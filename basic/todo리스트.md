@@ -45,7 +45,6 @@ To-do 리스트 어플리케이션은 내가 해야할 일들을 저장하고 �
 사용자의 선택을 도와줄 수 있도록 '메뉴출력'이라는 함수를 하나 만들어 주겠습니다.
 ```python
 def 메뉴출력():
-    print()
     print("To-do 리스트")
     print("1. 할 일 추가하기")
     print("2. 할 일 지우기")
@@ -57,7 +56,6 @@ def 메뉴출력():
 그리고 todo 목록을 관리할 리스트 변수도 하나 생성하겠습니다.
 ```python
 def 메뉴출력():
-    print()
     print("To-do 리스트")
     print("1. 할 일 추가하기")
     print("2. 할 일 지우기")
@@ -65,7 +63,7 @@ def 메뉴출력():
     print("4. 프로그램 종료하기")
 
 # 할일 목록이 저장될 리스트
-todo = []
+todos = []
 ```
 이제 프로그램 흐름에 따라서 코딩을 해봅시다.      
 반복이 코드의 처음부터 끝까지 되고 있습니다.      
@@ -74,104 +72,81 @@ todo = []
 
 ```python
 def 메뉴출력():
-    print()
     print("To-do 리스트")
     print("1. 할 일 추가하기")
     print("2. 할 일 지우기")
     print("3. 할 일 목록")
     print("4. 프로그램 종료하기")
 
-todo = []
+todos = []
 
 # 반복시작
 while True:
     # 메뉴 출력 함수 호출
     메뉴출력()
     # 메뉴 선택
-    menu = input("원하는 메뉴를 선택하세요 --> ")
+    command = input("원하는 작업을 선택하세요 --> ")
     
 # 반복 종료
 ```
 선택한 메뉴에 따라서 분기되는 코드를 만들어봅시다.       
 ```python
 def 메뉴출력():
-    print()
     print("To-do 리스트")
     print("1. 할 일 추가하기")
     print("2. 할 일 지우기")
     print("3. 할 일 목록")
     print("4. 프로그램 종료하기")
 
-todo = []
+todos = []
 
 # 반복시작
 while True:
     메뉴출력()
-    menu = input("원하는 메뉴를 선택하세요 --> ")
-    if menu == '1':
+    command = input("원하는 작업을 선택하세요 --> ")
+    if command == '1':
         # todo리스트 추가
-    elif menu == '2':
+    elif command == '2':
         # todo리스트 삭제
-    elif menu == '3':
+    elif command == '3':
         # todo리스트 출력
-    elif menu == '4'
+    elif command == '4'
         # 프로그램 종료
 # 반복 종료
 ```
+
 여기에 원하는 코드들을 채워넣으면 되겠네요.
-
+선택한 메뉴에 따라서 분기되는 코드를 만들어봅시다.     
 
 ```python
 def 메뉴출력():
-    print()
     print("To-do 리스트")
     print("1. 할 일 추가하기")
     print("2. 할 일 지우기")
     print("3. 할 일 목록")
     print("4. 프로그램 종료하기")
 
-todo = []
-
-# 반복시작
-while True:
-    # 메뉴 출력 함수 호출
-    메뉴출력()
-    # 메뉴 선택
-    menu = input("원하는 메뉴를 선택하세요 --> ")
-    
-# 반복 종료
-```
-선택한 메뉴에 따라서 분기되는 코드를 만들어봅시다.       
-```python
-def 메뉴출력():
-    print()
-    print("To-do 리스트")
-    print("1. 할 일 추가하기")
-    print("2. 할 일 지우기")
-    print("3. 할 일 목록")
-    print("4. 프로그램 종료하기")
-
-todo = []
+todos = []
 
 # 반복시작
 while True:
     메뉴출력()
-    menu = input("원하는 메뉴를 선택하세요 --> ")
-    if menu == '1':
+    command = input("원하는 작업을 선택하세요 --> ")
+    if command == '1':
         # todo리스트 추가
         print(">>> 할 일 추가하기")
-        a = input("항목을 입력하세요: ")
-        todo.append(a)
-    elif menu == '2':
+        todo = input("항목을 입력하세요: ")
+        todos.append(todo)
+    elif command == '2':
         # todo리스트 삭제
         print(">>> 할 일 지우기")
-        a = input("항목을 입력하세요: ")
-        todo.remove(a)
-    elif menu == '3':
+        todo = input("항목을 입력하세요: ")
+        todos.remove(todo)
+    elif command == '3':
         # todo리스트 출력
-        for 할일 in todo:
-            print(할일)
-    elif menu == '4'
+        for todo in todos:
+            print(todo)
+    elif command == '4'
         # 프로그램 종료
         print(">>> 프로그램을 종료합니다.")
         break
@@ -191,31 +166,30 @@ while True:
 ### 결과
 ```python
 def 메뉴출력():
-    print()
     print("To-do 리스트")
     print("1. 할 일 추가하기")
     print("2. 할 일 지우기")
     print("3. 할 일 목록")
     print("4. 프로그램 종료하기")
 
-todo = []
+todos = []
 
 # 반복시작
 while True:
     메뉴출력()
-    menu = input("원하는 메뉴를 선택하세요 --> ")
-    if menu == '1':
+    command = input("원하는 작업을 선택하세요 --> ")
+    if command == '1':
         print(">>> 할 일 추가하기")
-        a = input("항목을 입력하세요: ")
-        todo.append(a)
-    elif menu == '2':
+        todo = input("항목을 입력하세요: ")
+        todos.append(todo)
+    elif command == '2':
         print(">>> 할 일 지우기")
-        a = input("항목을 입력하세요: ")
-        todo.remove(a)
-    elif menu == '3':
-        for 할일 in todo:
-            print(할일)
-    elif menu == '4'
+        todo = input("항목을 입력하세요: ")
+        todos.remove(todo)
+    elif command == '3':
+        for todo in todos:
+            print(todo)
+    elif command == '4'
         print(">>> 프로그램을 종료합니다.")
         break
 ```
