@@ -3,8 +3,9 @@
 To-do 리스트 어플리케이션은 내가 해야할 일들을 저장하고 관리하는 프로그램입니다.       
 ![스크린샷 2022-02-09 오전 10 44 51](https://user-images.githubusercontent.com/48852104/153106045-be4d5f19-882a-4172-bf96-ad00747a214f.png)
 
-해야할 리스트를 추가하고, 삭제하고, 목록을 조회하는 프로그램을 만들어보겠습니다.     
-먼저 화면 없이 프로그램을 만든 후에 해당 로직을 사용해서 GUI 프로그래밍도 진행하겠습니다.    
+해야할 작업을 추가하고, 삭제하고, 목록을 조회하는 프로그램을 만들어보겠습니다.     
+
+<img width="349" alt="image" src="https://user-images.githubusercontent.com/89170523/232436818-4e2f9e8c-ad88-43b3-b312-9734c05e1a05.png">
 
 ### 시나리오
 프로그램의 기능을 생각하며 메뉴를 구생해보겠습니다.        
@@ -110,7 +111,7 @@ while True:
         # todo리스트 삭제
     elif command == '3':
         # todo리스트 출력
-    elif command == '4'
+    elif command == '4':
         # 프로그램 종료
 # 반복 종료
 ```
@@ -146,7 +147,7 @@ while True:
         # todo리스트 출력
         for todo in todos:
             print(todo)
-    elif command == '4'
+    elif command == '4':
         # 프로그램 종료
         print(">>> 프로그램을 종료합니다.")
         break
@@ -189,7 +190,7 @@ while True:
     elif command == '3':
         for todo in todos:
             print(todo)
-    elif command == '4'
+    elif command == '4':
         print(">>> 프로그램을 종료합니다.")
         break
 ```
